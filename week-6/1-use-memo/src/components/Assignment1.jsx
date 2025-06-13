@@ -6,7 +6,15 @@ import { useState } from "react";
 export function Assignment1() {
     const [input, setInput] = useState(0);
     // Your solution starts here
-    const expensiveValue = 0; 
+    function factorial(number){
+        let fact = number;
+        while(number>=0){
+            fact = fact * number;
+            number--; 
+        }
+        return fact;
+    }
+    const expensiveValue = useMemo factorial(input); 
     // Your solution ends here
 
     return (
